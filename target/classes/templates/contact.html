@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" th:href="@{/navbar.css}">
+    <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/contacts.css}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a th:href="@{/main}" >Home</a></li>
+            <li><a th:href="@{/heroes}">Heroes</a></li>
+            <li><a th:href="@{/contacts}">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="box">
+        
+        <h1 class="header">Contacts</h1>
+
+        <ul class="ref">
+            <li>
+                <img class="image" src="https://www.pngmart.com/files/16/Black-Gmail-PNG-Image.png" alt="Gmail">
+                lspoke.larn@gmail.com
+            </li>
+            <li>
+                <img class="image" src="https://img.utdstc.com/icon/cf4/a56/cf4a56ca53058054e914aee3af999941ced9f5fc3349382c1bb7344f0cdb0206:200" alt="Telegram">
+                @lspoke
+            </li>
+            <li>
+                <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHab">
+                <a href="https://github.com/LSpoke001">GitHab</a> 
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link rel="stylesheet" th:href="@{/navbar.css}">
+    <link rel="stylesheet" th:href="@{/general.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a th:href="@{/main}" >Home</a></li>
+        <li><a th:href="@{/heroes}">Heroes</a></li>
+        <li><a th:href="@{/contacts}">Contacts</a></li>
+    </ul>
+</nav>
+<br><br><br><br><br>
+<span th:text="${hero.name}"></span>
+<br><br>
+<img th:src="${hero.image.url}" alt="Hero" height="400px">
+<br><br>
+<span th:text="${hero.description}"></span>
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
+
+.box{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    margin: 150px 50px;
+}
+.header{
+    font-size: 50px;
+}
+ul li{
+    margin-left: 50px;
+    font-size: 35px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.image{
+    width: 30px;
+    height: 30px;
+}
