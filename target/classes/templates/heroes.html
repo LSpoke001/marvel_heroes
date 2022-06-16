@@ -25,15 +25,12 @@
 
     <br>
 
-    <div>
+    <div th:class="boxes">
         <div th:each="hero:${heroes}" class="box">
-            <h3 th:text="${hero.name}"></h3>
             <a th:href="@{'/hero/' + ${hero.id}}">
+                <h5 th:text="${hero.name}"></h5>
                 <img th:src="${hero.image.url}" alt="Hero" height="400px">
             </a>
-
-
-
         </div>
     </div>
     

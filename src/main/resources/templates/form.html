@@ -18,7 +18,8 @@
     </nav>
     <form th:action="@{/form}" th:object="${hero}" th:method="post" th:class="form"
            enctype="multipart/form-data">
-        <h1>Fill out the form</h1>
+        <h1 th:class="title">Fill out the form</h1>
+        <br>
         <div style="margin-bottom: 25px">
             <h3>Name</h3>
             <input th:field="*{name}">
@@ -33,7 +34,7 @@
         </div>
         <div style="margin-bottom: 25px">
             <h3>Description</h3>
-            <textarea th:field="*{description}" cols="40" rows="3"></textarea>
+            <textarea th:field="*{description}" cols="60" rows="10"></textarea>
         </div>
         <div style="margin-bottom: 25px">
             <h3>Photo</h3>
