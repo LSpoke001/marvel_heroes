@@ -11,4 +11,5 @@ public interface ImageService {
     void saveImage(MultipartFile file, Hero hero) throws IOException;
     List<Image> getAllImage();
     Image getImageById(int id);
+    Image getImageWithoutByte(int id);
 }

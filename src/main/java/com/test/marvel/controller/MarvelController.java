@@ -27,11 +27,13 @@ public class MarvelController {
     public String showMyContacts(){
         return "contact";
     }
+
     @GetMapping("/heroes")
     public String showAllHeroes(Model model){
         model.addAttribute("heroes", heroService.getAllHeroes());
         return "heroes";
     }
+
     @GetMapping("/main")
     public String showIndex(){
         return "main";
@@ -50,6 +52,7 @@ public class MarvelController {
         heroService.saveHero(hero, file);
         return "redirect:/heroes";
     }
+
     @GetMapping("/hero/{id}")
     public String showHeroById(Model model, @PathVariable int id){
         Hero hero = heroService.getHeroById(id);

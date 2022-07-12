@@ -2,6 +2,7 @@ package com.test.marvel.service.hero;
 
 import com.test.marvel.entity.Hero;
 import com.test.marvel.entity.Image;
+import com.test.marvel.exception.NoSuchHeroException;
 import com.test.marvel.repository.HeroRepository;
 import com.test.marvel.repository.ImageRepository;
 import com.test.marvel.service.image.ImageService;
@@ -37,6 +38,9 @@ public class HeroServiceImpl implements HeroService{
     @Override
     public Hero getHeroById(int id) {
         Optional<Hero> optional = heroRepository.findById(id);
+        if(optional == null){
+            throw new NoSuchHeroException("No hero");
+        }
         return optional.get();
     }
 }

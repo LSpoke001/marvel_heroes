@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -21,13 +23,18 @@ public class ImageServiceImpl implements ImageService{
 
     @Override
     public List<Image> getAllImage() {
-        return imageRepository.findAll();
+        return imageRepository.findAllImages();
     }
 
     @Override
     public Image getImageById(int id) {
         Optional<Image> optional = imageRepository.findById(id);
         return optional.get();
+    }
+
+    @Override
+    public Image getImageWithoutByte(int id) {
+        return imageRepository.findImageWithoutByte(id);
     }
 
     public void saveImage(MultipartFile file, Hero hero) throws IOException {

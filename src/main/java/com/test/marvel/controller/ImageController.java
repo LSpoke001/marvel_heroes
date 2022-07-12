@@ -30,7 +30,7 @@ public class ImageController {
                 .body(new InputStreamResource(new ByteArrayInputStream(image.getBytes())));
     }
     @GetMapping("/heroes/{id}/image")
-    public ResponseEntity<?> showHerosImageById(@PathVariable int id){
+    public ResponseEntity<?> showHeroesImageById(@PathVariable int id){
         Image image = heroService.getHeroById(id).getImage();
         return ResponseEntity.ok()
                 .header("file", image.getName())

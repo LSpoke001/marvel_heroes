@@ -25,6 +25,14 @@ public class Image {
     public Image() {
     }
 
+    public Image(int id, String name, String url, String type, int size) {
+        this.id = id;
+        this.name = name;
+        this.url = url;
+        this.type = type;
+        this.size = size;
+    }
+
     public Image(String name, String url, String type, int size, byte[] bytes) {
         this.name = name;
         this.url = url;
